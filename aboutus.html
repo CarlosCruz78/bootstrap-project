@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Jiu-Jitsu</title>
+</head>
+<body>
+  <section style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 700px; margin: auto; padding: 20px;">
+    <img src="./images/nogi.jpg" class="img-fluid" alt="...">
+    <style>
+      body {
+        background: linear-gradient(to right, #e0f7fa, #fff);
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+      }
+  
+      .contact-container {
+        max-width: 600px;
+        margin: 60px auto;
+        background: #f5f5f5;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        color: #333;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 0.6s ease;
+      }
+  
+      .contact-container.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  
+      .contact-container a {
+        color: #0066cc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+  
+      .contact-container a:hover {
+        color: #cc0000;
+      }
+  
+      .toggle-btn {
+        display: block;
+        margin: 0 auto;
+        margin-top: 40px;
+        padding: 12px 24px;
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+  
+      .toggle-btn:hover {
+        background-color: #004b99;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <button class="toggle-btn" onclick="toggleContact()">Show Contact Info</button>
+  
+    <div id="contactBox" class="contact-container">
+      <p style="font-size: 1.4em; font-weight: bold; color: #1a1a1a; margin-bottom: 10px;">
+        Contact Carlos Cruz Brazilian Jiu-Jitsu
+      </p>
+  
+      <p><strong>Location:</strong> Miami, FL</p>
+  
+      <p><strong>Email:</strong> 
+        <a href="mailto:carlosbjjmiami@example.com">carlosbjjmiami@example.com</a>
+      </p>
+  
+      <p><strong>Phone:</strong> 
+        <a href="tel:3055557890">(305) 555-7890</a>
+      </p>
+  
+      <p style="margin-top: 20px;">
+        For class schedules, private lessons, or general inquiries, feel free to reach out via email or phone. 
+        <strong>Oss!</strong>
+      </p>
+    </div>
+  
+    <script>
+      const contactBox = document.getElementById('contactBox');
+      const button = document.querySelector('.toggle-btn');
+      let isVisible = false;
+  
+      function toggleContact() {
+        isVisible = !isVisible;
+        contactBox.classList.toggle('show', isVisible);
+        button.textContent = isVisible ? 'Hide Contact Info' : 'Show Contact Info';
+      }
+    </script>
+  
+  </section>
+  
+      <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+     
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./aboutus.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+      
+</body>
+</html>
